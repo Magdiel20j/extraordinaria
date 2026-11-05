@@ -1,0 +1,9 @@
+import {Schema,model} from 'mongoose';
+
+const productsSchema = new Schema ({
+    name: {type: String},
+    description : {type: String},
+    price: {type: Number},
+    stock: {type: Number},
+},{timestamps:true,strict,flase});
+export default model('products', productsSchema);
